@@ -145,14 +145,6 @@ export default function Fill() {
     }
   }
 
-  // Auto-submit once all answered
-  useEffect(() => {
-    if (allAnswered && !submitted && !submitting) {
-      void submit()
-    }
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [allAnswered])
-
   if (loading)
     return (
       <div className="mx-auto max-w-3xl px-4 py-6">Loading...</div>
